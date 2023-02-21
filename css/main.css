@@ -2935,7 +2935,7 @@ input, select, textarea {
 	}
 		.gallery h3,p {
 			flex:auto; width: 100%;
-			margin: 0 0 0 1.25rem;
+			margin: 1.25rem 0 0 1.25rem;
 		}
 
 		.gallery a {
