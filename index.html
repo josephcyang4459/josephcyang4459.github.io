@@ -1,10 +1,5 @@
 <!DOCTYPE HTML>
-<!--
-	Paradigm Shift by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<html lang="en">
 	<head>
 		<title>Joseph Yang</title>
 		<meta charset="utf-8" />
@@ -21,35 +16,40 @@
 			<div id="wrapper">
 				 <!-- Navigation -->
 				 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-					<a class="navbar-brand" href="#">Home</a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-					  <span class="navbar-toggler-icon"></span>
-					</button>
-				  
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					  <ul class="navbar-nav mr-auto">
-						<li class="nav-item active">
-						  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-						</li>
-						<li class="nav-item">
-						  <a class="nav-link" href="#">Link</a>
-						</li>
-					  </ul>
+						<ul class="navbar-nav mr-auto">
+							<li class="nav-item">
+								<a class="navbar-brand scrolly" href="#intro">Home</a>
+							</li>
+							<li class="nav-item" style="padding-right: 1rem;">
+								<a class="nav-link scrolly" href="#about">About</a>
+							</li>
+							<li class="nav-item" style="padding-right: 1rem;">
+								<a class="nav-link scrolly" href="#skills">Skills</a>
+							</li>
+							<li class="nav-item" style="padding-right: 1rem;">
+								<a class="nav-link scrolly" href="#work">Work</a>
+							</li>
+							<li class="nav-item" style="padding-right: 1rem;">
+								<a class="nav-link scrolly" href="#contact">Contact</a>
+							</li>
+							<li class="nav-item" style="padding-right: 1rem;">
+								<a class="nav-link scrolly" href="archive.html">Archive</a>
+							</li>
+						</ul>
+						<a href="assets/Resume - Joseph Yang.pdf" class="button primary" target="_blank">Resume</a>
 					</div>
 				  </nav>
 				<!-- End of Navigation -->
 
 				<!-- Intro -->
-					<section class="intro">
+					<section id="intro" class="intro">
 						<header>
-							<h1>Hello, I'm Joseph.</h1>
-							<p>I'm a game developer that occasionally does non-game-development things.</p>
-							<ul class="actions">
-								<li><a href="#about" class="arrow scrolly"><span class="label">Next</span></a></li>
-							</ul>
+							<a href="#about" class="scrolly" style="color: inherit;"><h1>Hello, I'm Joseph.</h1></a>
+							<p>I'm a software developer that occasionally does non-software things.</p>
 						</header>
 						<div class="content">
-							<span class="image fill" data-position="center"><img src="images/Flik.png" alt="" /></span>
+							<span class="image fill"><a href="#about" class="scrolly"><img src="images/Portrait.png" alt="" style="width: 100%;"/></a></span>
 						</div>
 					</section>
 
@@ -59,25 +59,27 @@
 							<h2>Who is Joseph?</h2>
 						</header>
 						<div class="content">
-							<h2>Front-end Game Developer</h2>
+							<hr>
+							<h2>Front-end Software Developer</h2>
 							<p>I'm passionate about bringing about both the visual and technical aspects of projects. Healthy collaboration,
 								user experience, and writing clean understandable code matters a lot to me. It's important for those you're working with
-								to feel appreciated for the work they do. And as a follower of the <a href="https://agilemanifesto.org/">Agile Manifesto</a>,
-								I do agree that we should give motivated individuals the environment and support they need.
+								to feel appreciated for the work they do. And as a follower of the <a href="https://agilemanifesto.org/" target="_blank">
+								Agile Manifesto</a>, I do agree that we should give motivated individuals the environment and support they need.
 							</p>
-							<p>I'm currently attending <a href="https://www.uww.edu/">University of Wisconsin - Whitewater</a> for my Bachelor of Science,
-								with an Associates Degree from <a herf="https://madisoncollege.edu">Madison Area Technical College.</a>
+							<p>I'm currently attending <a href="https://www.uww.edu/" target="_blank">University of Wisconsin - Whitewater</a> for my Bachelor of Science,
+								with an Associates Degree from <a href="https://madisoncollege.edu" target="_blank">Madison Area Technical College.</a>
 							</p>
-							<span class="image main"><img src="images/Whiny The Poo Ripped.png" alt="" /></span>
+							<span class="image main"><img src="images/Programming.jpeg" alt="" /></span>
 						</div>
 					</section>
 
 				<!-- Section -->
-					<section>
+					<section id="skills">
 						<header>
 							<h2>Skills and Technologies</h2>
 						</header>
 						<div class="content">
+							<hr>
 							<p>Here are some of the <strong>skills and tools</strong> I use to give life to my projects.</p>
 							<ul class="feature-icons">
 								<li class="icon brands fa-html5">HTML5</li>
@@ -89,15 +91,19 @@
 								<li class="icon brands fa-python">Python</li>
 								<li class="icon solid fa-code-branch">Azure DevOps</li>
 							</ul>
+							<h3>Currently working on:</h3>
+							<p style="margin: 0">Improving my skills in, and understanding of Unity and software development.
+							</p>
 						</div>
 					</section>
 
 				<!-- Section -->
-					<section>
+					<section id="work">
 						<header>
 							<h2>Works</h2>
 						</header>
 						<div class="content">
+							<hr>
 							<!-- Section -->
 								<section>
 									<header>
@@ -106,15 +112,42 @@
 									</header>
 									<div class="content">
 										<div class="gallery">
-											<a class="landscape"><img src="images/Dim.png" alt="" /></a>
-											<h3>Title of Work goes here</h3>
-											<p>This is one big boi</p>
-											<a class="landscape"><img src="images/Donkeh.png" alt="" /></a>
-											<h3>Title of Work goes here</h3>
-											<p>This is one big boi</p>
+											<h3>Human-Drone Interaction</h3>
+											<a class="landscape" ><img src="images/works/Drones.gif" alt="" style="height: auto;"/></a>
+											<p>Nothing says cool like using artificial intelligence to help you decide what to do next.
+												Especially when you're fighting against your greatest enemies.</p>
+
+											<!--
+												<p style="padding-top: .5rem;"><strong>Have you ever</strong> wondered whether your choices could be better
+												with the help of Artificial Intelligence? Well, that's what this project attempts to do. Currently in it's
+												early stages, this project hopes to help people make better decisions, specifically in the heat of battle,
+												by having artificial intelligence recommending choices to the user, but ultimately giving the user the final
+												say in the decision-making process.
+											</p>-->
+											
+											<ul class="actions">
+												<li><a href="#" class="button primary" style="width: 100%">Check it Out!</a></li>
+											</ul>
+											<h3>Boat Tracker</h3>
+											<a class="landscape"><img src="images/works/Boat Tracker.gif" alt=""  style="height: auto;"/></a>
+											<p>When you want to know how good (or poor) you did on that one particular race, you check it
+												out with this.</p>
+											
+											
+											<!--
+												<p>Ever wondered how good you did on that one particular race? Well, just strap on a GPS device while
+												you race and upload the data afterwards. This website shows you your route, as well as the routes of
+												other people that have registered too, letting you and everyone know what the best route would be for that
+												particular race.
+											</p>-->
+											<ul class="actions">
+												<li><a href="#" class="button primary" style="width: 100%">Check it Out!</a></li>
+												<li><a href="https://github.com/imbranch/BoatTracker" class="button" style="width: 100%" target="_blank">Github Link</a></li>
+											</ul>
 										</div>
 									</div>
 								</section>
+								<hr>
 
 							<!-- Section -->
 								<section>
@@ -124,17 +157,29 @@
 									</header>
 									<div class="content">
 										<div class="gallery">
-											<a class="landscape"><img src="images/Dim.png" alt="" /></a>
-											<h3>Title of Work goes here</h3>
-											<p>This is one big boi</p>
-											<a class="landscape"><img src="images/Donkeh.png" alt="" /></a>
-											<h3>Title of Work goes here</h3>
-											<p>This is one big boi</p>
+											<h3>Duo Darts: Romance</h3>
+											<a class="landscape"><img src="images/works/Duo Darts.gif" alt="" style="height: auto"/></a>
+											<p>Darts in the air, hearts on the line. A Game from a Game Jam, made for love and made with love.</p>
+											<ul class="actions">
+												<li><a href="#" class="button primary" style="width: 100%">Check it Out!</a></li>
+												<li><a href="https://github.com/jcy2000/Duo-Darts" class="button" style="width: 100%" target="_blank">Github Link</a></li>
+											</ul>
+											<h3>Town of Salem Card Game Revamp</h3>
+											<a class="landscape"><img src="images/works/ToS.PNG" alt=""  style="height: auto"/></a>
+											<p>After playing the Town of Salem card game, I felt that it lacked many of the features compared
+												to its online counterpart. So I took the card game and revamped it to be more faithful to the original.
+											</p>
+
+											<!--
+											<p>Town of Salem is one of the greatest games of Deception out there, tied with Werewolf. After playing the card game
+												that the company offered (which lacked many of the features of it's online counterpart), I decided to take it
+												into my own hands to revamp the entire card game.
+											</p>
+											-->
 										</div>
 										<div class="content">
 											<ul class="actions">
 												<li><a href="#" class="button primary">Check it Out!</a></li>
-												<li><a href="#" class="button">Github Link</a></li>
 											</ul>
 										</div>
 									</div>
@@ -412,11 +457,12 @@ print 'Sorted in ' + i + ' iterations.';</code></pre>
 				-->
 
 				<!-- Section -->
-					<section>
+					<section id="contact">
 						<header>
 							<h2>Get in touch</h2>
 						</header>
 						<div class="content">
+							<hr>
 							<p style="margin: 0;">Feeling a little adventurous today? I'd love to hear from you!</p>
 							<p style="margin: 0;">Fill in your info in the form below and send it!</p>
 							<form>
@@ -440,13 +486,13 @@ print 'Sorted in ' + i + ' iterations.';</code></pre>
 							<ul class="items">
 								<li>
 									<h3>Email</h3>
-									<a href="#">josephcyang4459@outlook.com</a>
+									<a href="mailto: josephcyang4459@outlook.com">josephcyang4459@outlook.com</a>
 								</li>
 								<li>
 									<h3>Elsewhere</h3>
 									<ul class="icons">
-										<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-										<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+										<li><a href="https://www.linkedin.com/in/joseph-yang-4848a416b/" target="_blank" class="icon brands fa-linkedin-in" style="color: inherit;"><span class="label">LinkedIn</span></a></li>
+										<li><a href="https://github.com/jcy2000" target="_blank" class="icon brands fa-github" style="color: inherit;"><span class="label">GitHub</span></a></li>
 									</ul>
 								</li>
 							</ul>
