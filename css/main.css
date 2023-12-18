@@ -165,4 +165,10 @@ section {
 			color: #5492e2;
 		}
 	}
+
+	ul {
+		columns: 3;
+		-webkit-columns: 3;
+  		-moz-columns: 3;
+	}
 }
