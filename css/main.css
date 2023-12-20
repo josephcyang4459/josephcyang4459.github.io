@@ -3,6 +3,9 @@
 
 /* General CSS */
 #application { background-color: #101e3d; }
+html {
+	scroll-behavior: smooth;
+}
 
 #wrapper {
 	color: #8892b0;
@@ -56,6 +59,13 @@ section {
 		transform: scaleX(1);
 		transform-origin: bottom left;
 	  }
+}
+
+hr {
+	background-color: #778899;
+	display:inline-block;
+	width: 50%;
+	margin-left: 20px;
 }
 
 /* Navigation */
@@ -124,6 +134,7 @@ section {
 	#about-header {
 		white-space: nowrap;
 		margin-bottom: 25px;
+		display: flex;
 
 		h1 { display: inline; }
 
@@ -131,22 +142,23 @@ section {
 			color: #5fa4ff;
 			display: inline;
 		}
-
-		hr {
-			background-color: #778899;
-			display:inline-block;
-			width: 50%;
-			margin-left: 20px;
-		}
 	}
 
 	#about-content {
 		.col-3 { padding-left: 0;}
-		img { width: 150px; height: 150px;}
-		div:first-child { padding-bottom: 15px; }
+		img {
+			width: 150px;
+			height: 150px;
+			border-radius: 25%;
+		}
 
-		#about-headers { padding-left: 20px; }
-		#about-description { font-size: 1.15rem; padding-bottom: 15px;}
+		div:first-child {
+			padding-bottom: 15px;
+			display:flex;
+		}
+
+		#about-headers { padding-left: 40px; }
+		#about-description { font-size: 1.15rem; padding-top: 20px; padding-bottom: 15px;}
 
 		h1 { margin: 20px 0 5px 0; }
 
@@ -167,8 +179,50 @@ section {
 	}
 
 	ul {
+		margin: 0;
 		columns: 3;
-		-webkit-columns: 3;
+		-webkit-columns: 4;
   		-moz-columns: 3;
+
+		li { font-size: .95rem; }
+	}
+}
+
+/* Skills */
+#skills {
+	h1 { display: inline; }
+
+	p {
+		color: #5fa4ff;
+		display: inline;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0 40px;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 10px;
+		list-style: none;
+		align-items: center;
+		
+
+		li {
+			font-size: .95rem;
+
+			a {
+				display:block;
+				margin: 0 auto;
+			}
+
+			img {
+				width: 100%;
+				transition: .2s;
+
+				&:hover {
+					transform: scale(1.2);
+				}
+			}
+		}
 	}
 }
