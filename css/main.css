@@ -13,7 +13,8 @@ html {
 }
 
 section {
-	padding-top: 250px;
+	padding-top :125px;
+	padding-bottom: 250px;
 	margin: auto;
 	margin-left: 25%;
 	margin-right: 25%;
@@ -101,7 +102,8 @@ hr {
 
 /* Intro */
 .intro {
-	padding-bottom: 125px;
+	padding-top: 250px;
+	padding-bottom: 375px;
 
 	h1 {
 		font-size: 1.25rem !important;
