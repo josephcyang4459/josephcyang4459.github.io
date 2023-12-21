@@ -14,7 +14,7 @@ html {
 
 section {
 	padding-top :125px;
-	padding-bottom: 250px;
+	padding-bottom: 125px;
 	margin: auto;
 	margin-left: 25%;
 	margin-right: 25%;
@@ -36,7 +36,6 @@ section {
 	position: relative;
 	transition: .5s;
 	
-
 	&:hover {
 		color: #5fa4ff;
 		text-decoration: none;
@@ -67,6 +66,17 @@ hr {
 	display:inline-block;
 	width: 50%;
 	margin-left: 20px;
+}
+
+.header {
+	white-space: nowrap;
+
+	h1 { display: inline; }
+
+	p {
+		color: #5fa4ff;
+		display: inline;
+	}
 }
 
 /* Navigation */
@@ -102,8 +112,7 @@ hr {
 
 /* Intro */
 .intro {
-	padding-top: 250px;
-	padding-bottom: 375px;
+	padding: 250px 0;
 
 	h1 {
 		font-size: 1.25rem !important;
@@ -133,18 +142,7 @@ hr {
 
 /* About */
 #about {
-	#about-header {
-		white-space: nowrap;
-		margin-bottom: 25px;
-		display: flex;
-
-		h1 { display: inline; }
-
-		p {
-			color: #5fa4ff;
-			display: inline;
-		}
-	}
+	#about-header { margin-bottom: 25px; }
 
 	#about-content {
 		.col-3 { padding-left: 0;}
@@ -192,13 +190,6 @@ hr {
 
 /* Skills */
 #skills {
-	h1 { display: inline; }
-
-	p {
-		color: #5fa4ff;
-		display: inline;
-	}
-
 	ul {
 		margin: 0;
 		padding: 0 40px;
@@ -227,4 +218,8 @@ hr {
 			}
 		}
 	}
+}
+
+#experience {
+
 }
