@@ -233,7 +233,21 @@ hr {
 		display: grid;
 		grid-template-columns: 132px auto;
 		column-gap: 30px;
+
+		div:first-child img {
+			width:100%;
+			padding-top: 20px;
+			transition: .2s;
+			display:block;
+			margin: 0 auto;
+
+				&:hover {
+					transform: scale(1.1);
+				}
+		}
 	}
+
+	#experience-item-freelance:hover { transform: none; }
 
 	.experience-item-content {
 		white-space: nowrap;
