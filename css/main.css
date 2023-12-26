@@ -2,13 +2,19 @@
 
 
 /* General CSS */
-#application { background-color: #101e3d; }
-html {
-	scroll-behavior: smooth;
+:root {
+	--oceanblue: #5fa4ff;
+	--deep-oceanblue: #101e3d;
+	--stone: #8892b0;
+	--light-stone: #778899;
 }
 
+#application { background-color: var(--deep-oceanblue); }
+html { scroll-behavior: smooth; }
+body { counter-reset: section;}
+
 #wrapper {
-	color: #8892b0;
+	color: var(--stone);
 	align-content: center;
 }
 
@@ -21,23 +27,23 @@ section {
 }
 
 .btn {
-	border-color: #5fa4ff !important;
-	color: #5fa4ff;
+	border-color: var(--oceanblue) !important;
+	color: var(--oceanblue);
 
 	&:hover {
 		background-color: #5fa4ff28;
-		color: #5fa4ff;
+		color: var(--oceanblue);
 	}
 }
 
 .text-link {
-	color: #5fa4ff;
+	color: var(--oceanblue);
 	display: inline-block;
 	position: relative;
 	transition: .5s;
 	
 	&:hover {
-		color: #5fa4ff;
+		color: var(--oceanblue);
 		text-decoration: none;
 	}
 
@@ -49,8 +55,7 @@ section {
 		height: 2px;
 		bottom: 0;
 		 left: 0;
-		background-color: 
-		#0087ca;
+		background-color: #0087ca;
 		transform-origin: bottom right;
 		transition: transform .2s ease-out;
 	}
@@ -62,20 +67,24 @@ section {
 }
 
 hr {
-	background-color: #778899;
+	background-color: var(--light-stone);
 	margin-left: 20px;
 	width:100%;
 	height: 1px !important;
 }
+
 
 .header {
 	white-space: nowrap;
 	margin-bottom: 25px;
 	display: flex;
 	align-items: center;
+	counter-increment: header;
 
-	p {
-		color: #5fa4ff;
+	h1::before {
+		counter-increment: section;
+		content: "0" counter(section) ". ";
+		color: var(--oceanblue);
 		display: inline;
 	}
 }
@@ -91,23 +100,23 @@ hr {
 	#navbar-resume { margin-left: 1.25rem; }
 
 	p {
-		color: #5fa4ff;
+		color: var(--oceanblue);
 		display: inline;
 	}
 
 	.navbar-brand {
-		color: #778899;
+		color: var(--light-stone);
 		transition: .2s;
 
-		&:hover { color: #5fa4ff; }
+		&:hover { color: var(--oceanblue); }
 	}
 
 	.nav-link {
 		padding: 0 1.25rem;
-		color: #778899;
+		color: var(--light-stone);
 		transition: .2s;
 
-		&:hover { color: #5fa4ff; }
+		&:hover { color: var(--oceanblue); }
 	}
 }
 
@@ -119,7 +128,7 @@ hr {
 
 	h1 {
 		font-size: 1.25rem !important;
-		color: #5fa4ff !important;
+		color: var(--oceanblue) !important;
 		margin:0 !important;
 	}
 
@@ -166,7 +175,7 @@ hr {
 		h2 {
 			margin: 0 0 5px 0;
 			font-size: 1.15rem;
-			color: #778899;
+			color: var(--light-stone);
 		}
 		h3 {
 			margin: 0;
@@ -175,7 +184,7 @@ hr {
 		}
 
 		.text-link {
-			color: #5492e2;
+			color: var(--oceanblue);
 		}
 	}
 
@@ -214,7 +223,7 @@ hr {
 				transition: .2s;
 
 				&:hover {
-					transform: scale(1.2);
+					transform: scale(1.15);
 				}
 			}
 		}
@@ -223,11 +232,6 @@ hr {
 
 /* Experience */
 #experience {
-	#experience-header {
-		display: flex;
-		align-items: center;
-	}
-
 	.experience-item {
 		margin-bottom: 15px;
 		display: grid;
@@ -242,7 +246,7 @@ hr {
 			margin: 0 auto;
 
 				&:hover {
-					transform: scale(1.1);
+					transform: scale(1.05);
 				}
 		}
 	}
@@ -254,7 +258,7 @@ hr {
 
 		p {
 			margin: 0;
-			color:#5fa4ff;
+			color: var(--oceanblue);
 		}
 
 		a {
@@ -262,7 +266,7 @@ hr {
 
 			img {
 				height: 20px;
-				margin-bottom: 1px;
+				padding-bottom: 3px;
 			}
 		}
 
@@ -291,6 +295,44 @@ hr {
 				padding-right: 5px;
 			}
 		}
-		
+	}
+}
+
+/* Projects*/
+#projects {
+	#projects-content {
+		.projects-content-featured {
+			display: grid;
+			grid-template-columns: 65% auto;
+
+			.projects-content-featured-image-overlay {
+				width: 100%;
+				border-radius: 5px;
+				transition: .2s;
+				
+				&:hover { background-color: var(--oceanblue); }
+			}
+
+			img {
+				width: 100%;
+				border-radius: 5px;
+				transition: .2s;
+
+				&:hover {
+					opacity: .8;
+				}
+			}
+
+			.projects-content-featured-description {
+				text-align: right;
+
+				h1 {
+					color: var(--oceanblue);
+					font-size: 1.15rem;
+				}
+
+				h2 {font-size: 1.5rem;}
+			}
+		}
 	}
 }
