@@ -65,6 +65,16 @@ section {
 	  }
 }
 
+.header-link {
+	color: var(--stone);
+	transition: .2s;
+	
+	&:hover {
+		color: var(--oceanblue);
+		text-decoration: none;
+	}
+}
+
 hr {
 	background-color: var(--darker-stone);
 	margin-left: 20px;
