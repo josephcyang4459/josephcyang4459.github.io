@@ -6,7 +6,7 @@
 	--oceanblue: #5fa4ff;
 	--deep-oceanblue: #101e3d;
 	--stone: #8892b0;
-	--light-stone: #778899;
+	--darker-stone: #778899;
 }
 
 #application { background-color: var(--deep-oceanblue); }
@@ -19,8 +19,7 @@ body { counter-reset: section;}
 }
 
 section {
-	padding-top :125px;
-	padding-bottom: 125px;
+	padding: 125px 0;
 	margin: auto;
 	margin-left: 25%;
 	margin-right: 25%;
@@ -67,7 +66,7 @@ section {
 }
 
 hr {
-	background-color: var(--light-stone);
+	background-color: var(--darker-stone);
 	margin-left: 20px;
 	width:100%;
 	height: 1px !important;
@@ -89,6 +88,26 @@ hr {
 	}
 }
 
+.link, .link-github {
+	background-size: 20px;
+	background-repeat: no-repeat;
+	width: 20px;
+	height: 20px;
+	transition: .2s;
+}
+
+.link {
+	background-image: url("../images/link-arrow.png");
+
+	&:hover { background-image: url("../images/link-arrow-hover.png"); }
+}
+
+.link-github {
+	background-image: url("../images/github-icon.png");
+
+	&:hover { background-image: url("../images/github-icon-hover.png"); }
+}
+
 /* Navigation */
 #navbar {
 	padding: 32px 48px;
@@ -99,13 +118,8 @@ hr {
 
 	#navbar-resume { margin-left: 1.25rem; }
 
-	p {
-		color: var(--oceanblue);
-		display: inline;
-	}
-
 	.navbar-brand {
-		color: var(--light-stone);
+		color: var(--darker-stone);
 		transition: .2s;
 
 		&:hover { color: var(--oceanblue); }
@@ -113,8 +127,15 @@ hr {
 
 	.nav-link {
 		padding: 0 1.25rem;
-		color: var(--light-stone);
+		color: var(--darker-stone);
 		transition: .2s;
+		counter-increment: nav-link;
+
+		&::before {
+			content: "0" counter(nav-link) ". ";
+			color: var(--oceanblue);
+			display: inline;
+		}
 
 		&:hover { color: var(--oceanblue); }
 	}
@@ -148,7 +169,7 @@ hr {
 
 	.btn {
 		margin-top: 1.5rem;
-		padding: 15px 20px 15px 20px;
+		padding: 15px 20px;
 	}
 }
 
@@ -156,6 +177,7 @@ hr {
 #about {
 	#about-content {
 		.col-3 { padding-left: 0;}
+
 		img {
 			width: 150px;
 			height: 150px;
@@ -168,14 +190,19 @@ hr {
 		}
 
 		#about-headers { padding-left: 40px; }
-		#about-description { font-size: 1.15rem; padding-top: 20px; padding-bottom: 15px;}
+
+		#about-description {
+			font-size: 1.15rem;
+			padding-top: 20px;
+			padding-bottom: 15px;
+		}
 
 		h1 { margin: 20px 0 5px 0; }
 
 		h2 {
 			margin: 0 0 5px 0;
 			font-size: 1.15rem;
-			color: var(--light-stone);
+			color: var(--darker-stone);
 		}
 		h3 {
 			margin: 0;
@@ -183,9 +210,7 @@ hr {
 			color: #56626e;
 		}
 
-		.text-link {
-			color: var(--oceanblue);
-		}
+		.text-link { color: var(--oceanblue); }
 	}
 
 	ul {
@@ -285,14 +310,9 @@ hr {
 
 			li {
 				float: left;
-			}
 
-			li:not(:first-child)::before {
-				content: "● ";
-			}
-
-			li:not(:last-child) {
-				padding-right: 5px;
+				&:not(:first-child)::before { content: "● "; }
+				&:not(:last-child) { padding-right: 5px; }
 			}
 		}
 	}
@@ -304,6 +324,7 @@ hr {
 		.projects-content-featured {
 			display: grid;
 			grid-template-columns: 65% auto;
+			margin-bottom: 100px;
 
 			.projects-content-featured-image-overlay {
 				width: 100%;
@@ -311,27 +332,129 @@ hr {
 				transition: .2s;
 				
 				&:hover { background-color: var(--oceanblue); }
-			}
 
-			img {
-				width: 100%;
-				border-radius: 5px;
-				transition: .2s;
-
-				&:hover {
-					opacity: .8;
+				img {
+					width: 100%;
+					border-radius: 5px;
+					transition: .2s;
+	
+					&:hover {
+						opacity: .8;
+						background-color: var(--oceanblue);
+					}
 				}
 			}
 
 			.projects-content-featured-description {
 				text-align: right;
+				margin-left: 10px;
 
 				h1 {
 					color: var(--oceanblue);
 					font-size: 1.15rem;
+					margin: 0;
 				}
 
-				h2 {font-size: 1.5rem;}
+				h2 {
+					font-size: 1.5rem;
+					margin-bottom: 20px;
+				}
+
+				p {
+					color: var(--darker-stone);
+					font-size: 1.1rem;
+				}
+				
+				.link, .link-github {
+					float:right;
+					margin-top:16px;
+				}
+			}
+
+			/* Reverses the format, left is right and right is left yo.*/
+			&:nth-child(2) {
+				grid-template-columns: auto 65%;
+
+				.projects-content-featured-description {
+					text-align: left;
+					margin-left: 0;
+					margin-right: 10px;
+					
+					.link, .link-github { float:left; }
+				}
+			}
+		}
+
+		.projects-content-other-header {
+			padding-top: 50px;
+			text-align: center;
+		}
+
+		.projects-content-other {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+			margin: 0;
+			padding-left: 0;
+			text-align: center;
+
+			.projects-content-other-content {
+				display: block;
+				background-color: #162850;
+				border-radius: 5px;
+				list-style: none;
+				margin: 10px;
+				height: 300px;
+				position: relative;
+				top: 0;
+				transition: .2s;
+
+				.projects-content-other-content-inner {
+					display: grid;
+					grid-template-rows: auto auto 1fr;
+					padding: 25px 25px;
+					height: 300px;
+
+					.projects-content-other-content-inner-hover {
+						color: var(--stone);
+						font-size: 1.75rem;
+						transition: .5s;
+						padding-top: 15px;
+						margin-bottom: 10px;
+						font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+						font-weight: 500;
+						line-height: 1.2;
+
+						&::before {
+							content: "";
+							display: block;
+							position: absolute;
+							width: 100%;
+							height: 100%;
+							top: 0px;
+							left: 0px;
+						}
+	
+						&:hover {
+							color: var(--oceanblue);
+							text-decoration: none;
+						}
+					}
+
+					.projects-content-other-content-inner-links {
+						display: flex;
+						align-items: flex-end;
+						justify-content: flex-end;
+
+						.link, .link-github {
+							position: relative;
+							z-index: 1;
+							margin-left: 5px;
+						}
+					}
+					
+				}
+
+				&:hover { top: -10px; }
 			}
 		}
 	}
