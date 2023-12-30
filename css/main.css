@@ -203,8 +203,8 @@ hr {
 
 		#about-description {
 			font-size: 1.15rem;
-			padding-top: 20px;
-			padding-bottom: 15px;
+			padding: 15px;
+			padding-left: 0;
 		}
 
 		h1 { margin: 20px 0 5px 0; }
@@ -230,38 +230,6 @@ hr {
   		-moz-columns: 3;
 
 		li { font-size: .95rem; }
-	}
-}
-
-/* Skills */
-#skills {
-	ul {
-		margin: 0;
-		padding: 0;
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		grid-gap: 10px;
-		list-style: none;
-		align-items: center;
-		
-
-		li {
-			font-size: .95rem;
-
-			a {
-				display:block;
-				margin: 0 auto;
-			}
-
-			img {
-				width: 100%;
-				transition: .2s;
-
-				&:hover {
-					transform: scale(1.15);
-				}
-			}
-		}
 	}
 }
 
@@ -468,4 +436,96 @@ hr {
 			}
 		}
 	}
+}
+
+/* Skills */
+#skills {
+	ul {
+		margin: 0;
+		padding: 0;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 10px;
+		list-style: none;
+		align-items: center;
+		
+
+		li {
+			font-size: .95rem;
+
+			a {
+				display:block;
+				margin: 0 auto;
+			}
+
+			img {
+				width: 100%;
+				transition: .2s;
+
+				&:hover {
+					transform: scale(1.15);
+				}
+			}
+		}
+	}
+}
+
+/* Contact */
+#contact {
+	p { width: 60%;}
+
+	.contact-form {
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		gap: 20px;
+		margin-right: 25px;
+
+		.contact-form-input {
+			margin: 3px 0;
+			width: 65%;
+			height: 50px;
+			padding-left: 10px;
+			border: 1px solid var(--stone);
+			border-radius: 5px;
+			outline: none;
+			font-weight: 500;
+			background-color: var(--deep-oceanblue);
+			caret-color: var(--stone);
+			color: #888888;
+
+			&:focus {
+				background-color: #0d1b36;
+			}
+
+			&:-webkit-autofill {
+				-webkit-text-fill-color: #888888;
+				-webkit-box-shadow:0 0 0 50px var(--deep-oceanblue) inset;
+			}
+
+			&:-webkit-autofill:focus {
+				-webkit-text-fill-color: #888888;
+				-webkit-box-shadow:0 0 0 50px #0d1b36 inset;
+			}
+		}
+
+		textarea {
+			height: 150px !important;
+			padding-top: 10px;
+		}
+
+		button {
+			font-size: 16px;
+			color: black;
+			background-color: #b8bfd4;
+			border: none;
+			border-radius: 10px;
+			padding: 10px 50px;
+
+			&:hover {
+				background-color: #d5dae7;
+			}
+		}
+	}
+	
 }

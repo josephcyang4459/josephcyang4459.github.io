@@ -25,3 +25,9 @@
 		}, 100);
 	});
 })(jQuery);
+
+function clearForms() {
+	let i;
+	for (i = 0; (i < document.forms.length); i++)
+		document.forms[i].reset();
+}
