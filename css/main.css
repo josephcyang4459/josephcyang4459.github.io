@@ -98,7 +98,7 @@ hr {
 	}
 }
 
-.link, .link-github {
+.link{
 	background-size: 20px;
 	background-repeat: no-repeat;
 	width: 20px;
@@ -106,14 +106,60 @@ hr {
 	transition: .2s;
 }
 
-.link {
-	background-image: url("../images/link-arrow.png");
-	&:hover { background-image: url("../images/link-arrow-hover.png"); }
+.link-standard {
+	background-image: url("../images/link-icons/link-arrow.png");
+	&:hover { background-image: url("../images/link-icons/link-arrow-hover.png"); }
 }
 
 .link-github {
-	background-image: url("../images/github-icon.png");
-	&:hover { background-image: url("../images/github-icon-hover.png"); }
+	background-image: url("../images/link-icons/github-icon.png");
+	&:hover { background-image: url("../images/link-icons/github-icon-hover.png"); }
+}
+
+.link-itchio {
+	background-image: url("../images/link-icons/itchio-icon.png");
+	&:hover { background-image: url("../images/link-icons/itchio-icon-hover.png"); }
+}
+
+.link-linkedin {
+	background-image: url("../images/link-icons/linkedin-icon.png");
+	&:hover { background-image: url("../images/link-icons/linkedin-icon-hover.png"); }
+}
+
+.link-email {
+	background-image: url("../images/link-icons/email-icon.png");
+	&:hover { background-image: url("../images/link-icons/email-icon-hover.png"); }
+}
+
+/* Overlay */
+#overlay {
+	width: 80px;
+    position: fixed;
+    bottom: 0px;
+    right: 40px;
+    left: auto;
+    z-index: 10;
+
+	#overlay-link-list {
+		display: flex;
+		flex-direction: column;
+		-webkit-box-align: center;
+		align-items: center;
+		margin: 5px 0;
+		padding: 0;
+		list-style: none;
+
+		li { margin: 10px 0; }
+	}
+
+	&::after {
+		content: "";
+		display: block;
+		width: 1px;
+		height: 75px;
+		margin: 0px auto;
+		background-color: var(--stone);
+	}
 }
 
 /* Navigation */
