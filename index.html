@@ -16,10 +16,13 @@
 		<meta name="author" content="Joseph Yang">
 		<meta name="description" content="Joseph's Personal Website. Come stay a while and listen!">
 		<meta name="image" content="images/preview-image.PNG">
-
 		<link rel="stylesheet" href="css/main.css">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-			  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+		 	integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script src="js/jquery.min.js"></script>
 		<script src="js/util.js"></script>
 		<script src="js/main.js"></script>
@@ -48,13 +51,15 @@
 				 <!-- Navigation -->
 				 <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
-						<a class="navbar-brand scrolly mr-auto" href="#">Home</a>
-						<a class="nav-link scrolly" href="#about">About</a>
-						<a class="nav-link scrolly" href="#experience" >Experience</a>
-						<a class="nav-link scrolly" href="#projects" >Work</a>
-						<a class="nav-link scrolly" href="#skills">Skills</a>
-						<a class="nav-link scrolly" href="#contact">Contact</a>
-						<a class="btn button primary" id="navbar-resume" href="assets/Resume - Joseph Yang.pdf" target="_blank">Resume</a>
+							<a class="navbar-brand scrolly mr-auto" href="#">Home</a>
+							<div class="nav-links">
+								<a class="nav-link scrolly" href="#about">About</a>
+								<a class="nav-link scrolly" href="#experience" >Experience</a>
+								<a class="nav-link scrolly" href="#projects" >Work</a>
+								<a class="nav-link scrolly" href="#skills">Skills</a>
+								<a class="nav-link scrolly" href="#contact">Contact</a>
+								<a class="btn button primary" id="navbar-resume" href="assets/Resume - Joseph Yang.pdf" target="_blank">Resume</a>
+							</div>
 					</div>
 				  </nav>
 
@@ -74,8 +79,8 @@
 				</section>
 
 				<!-- About -->
-				<section id="about" class="about">
-					<div id="about-header" class="header">
+				<section id="about">
+					<div class="header">
 						<h1>About</h1>
 						<hr>
 					</div>
@@ -104,8 +109,8 @@
 				</section>
 				
 				<!-- Experience -->
-				<section id="experience" class="experience">
-					<div id="experience-header" class="header">
+				<section id="experience">
+					<div class="header">
 						<h1>Experience</h1>
 						<hr>
 					</div>
@@ -186,8 +191,8 @@
 				</section>
 				
 				<!-- Projects -->
-				<section id="projects" class="projects">
-					<div id="projects-header" class="header">
+				<section id="projects">
+					<div class="header">
 						<h1>Projects</h1>
 						<hr>
 					</div>
@@ -243,6 +248,7 @@
 										Co-led the development and implementation of key concepts and UI/UX for a game inspired by mini-golf.
 									</div>
 									<div class="projects-content-other-content-inner-links">
+										<a href="https://divinytea.itch.io/mini-putt" target="_blank"><div class="link link-itchio"></div></a>
 										<a href="https://github.com/josephcyang4459/college-archives/tree/main/mini-putt" target="_blank"><div class="link link-github"></div></a>
 										<a href="https://divinytea.itch.io/mini-putt" target="_blank"><div class="link"></div></a>
 									</div>
@@ -276,12 +282,12 @@
 				</section>
 
 				<!-- Skills -->
-				<section id="skills" class="skills">
-					<div id="skills-header" class="header">
+				<section id="skills">
+					<div class="header">
 						<h1>Skills</h1>
 						<hr>
 					</div>
-					<div id ="skills-content" class="skills-content">
+					<div id="skills-content" class="skills-content">
 						<ul>
 							<li><a href="https://unity.com/" target="_blank"><img src="images/skills/unity.png" alt="unity"></a></li>
 							<li><a href="https://www.python.org/" target="_blank" style="width: 50%;"><img src="images/skills/python.png" alt="python"></a></li>
@@ -295,9 +301,60 @@
 					</div>
 				</section>
 
+				<!-- Acknowledgements -->
+				<section id="acknowledgements">
+					<div class="header">
+						<h1>Acknowledgements</h1>
+						<hr>
+					</div>
+					<h2>People I've worked with have said some nice things.</h2>
+					<div class="acknowledgements-content">
+						<div id="acknowledgements-carousel" class="carousel slide">
+							<div class="carousel-indicators">
+								<button type="button" data-bs-target="#acknowledgements-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+								<button type="button" data-bs-target="#acknowledgements-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+								<button type="button" data-bs-target="#acknowledgements-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+							</div>
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+									<img src="images/acknowledgements/Haki Dehari.jpg" class="d-block w-100" alt="Haki Dehari">
+									<p>“I commend Joseph for his resilience in the face of adversity.
+										His ability to remain calm under pressure and adapt to changing
+										circumstances has set an inspiring example for others. Not only that,
+										but his positive attitude and goal-oriented mindset have contributed to
+										a supportive workplace.”
+									</p>
+									<h3>Haki Dehari</h3>
+									<h4>Software Development Engineer, Amazon</h4>
+								</div>
+								<div class="carousel-item">
+									<img src="images/acknowledgements/Isaiah Ewing.jpg" class="d-block w-100" alt="Isaiah Ewing">
+									<p>"Joseph is patient and very understanding to work with. His collaboration and
+										clear communication have been crucial in overcoming challenges. In addition,
+										his ability to resolve complex situations has had such a positive impact on
+										our organization and has strengthened our relationships with clients."
+									</p>
+									<h3>Isaiah Ewing</h3>
+									<h4>Software Engineer, TDS Telecommunications LLC</h4>
+								</div>
+								<div class="carousel-item">
+									<img src="images/acknowledgements/Kaitlin Southard.jpg" class="d-block w-100" alt="Kaitlin Southard">
+									<p>"Joseph is a superb communicator. As our team lead, he ensured that everyone
+										worked cohesively and always had a sense of direction for the projects.
+										His unwavering reliability makes him uniquely suited for leadership and
+										made for a smooth and enjoyable team work environment."
+									</p>
+									<h3>Kaitlin Southard</h3>
+									<h4>Creative Director/Illustrator, Freelance</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
 				<!-- Contact -->
-				<section id="contact" class="contact">
-					<div id="contact-header" class="header">
+				<section id="contact">
+					<div class="header">
 						<h1>Contact</h1>
 						<hr>
 					</div>
@@ -312,9 +369,9 @@
 						<button class="btn btn-default" type="submit">Submit</button>
 					</form>
 				</section>
-				<!-- Acknowledgements -->
+
 				<!-- Footer Credentials -->
-				<footer>Built from scratch by Joseph Yang. © 2024</footer>
+				<footer>Designed and built by Joseph Yang. © 2024</footer>
 			</div>
 		</div>
 	</body>
