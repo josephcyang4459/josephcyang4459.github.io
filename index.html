@@ -7,7 +7,7 @@
 -->
 
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="en" style="background: #101e3d;"> <!-- Style prevents entire screen white flicker on first load -->
 	<head>
 		<title>Joseph Yang</title>
 		<meta charset="utf-8" />
@@ -28,7 +28,8 @@
 		<script src="js/main.js"></script>
 	</head>
 
-	<body class="is-preload" onload="clearForms()" onunload="clearForms()">
+	<body>
+		<div id="loader" class="loader"><p id="loader-content">Loading</p></div>
 		<!-- Wrapper -->
 		<div id="application">
 			<div id="overlay">
@@ -320,19 +321,19 @@
 									<img src="images/acknowledgements/Haki Dehari.jpg" class="d-block w-100" alt="Haki Dehari">
 									<p>“I commend Joseph for his resilience in the face of adversity.
 										His ability to remain calm under pressure and adapt to changing
-										circumstances has set an inspiring example for others. Not only that,
-										but his positive attitude and goal-oriented mindset can contribute to
-										a supportive workplace.”
+										circumstances has set an good example for others. Not only that,
+										but his positive attitude and goal-oriented mindset can contribute
+										to a supportive workplace.”
 									</p>
 									<h3><strong>Haki Dehari</strong></h3>
 									<h4>Software Development Engineer, Amazon</h4>
 								</div>
 								<div class="carousel-item">
 									<img src="images/acknowledgements/Isaiah Ewing.jpg" class="d-block w-100" alt="Isaiah Ewing">
-									<p>"Joseph is patient and very understanding to work with. His collaboration and
-										clear communication has the potential to overcome complex challenges. In addition,
-										his ability to keep an open mind when resolving complex situations can have a
-										positive impact on organizations and their clients."
+									<p>"Joseph is patient and understanding to work with. His collaboration
+										and communication has the potential to overcome difficult challenges.
+										In addition, his ability to keep an open mind when resolving issues
+										can have a positive impact on organizations and their clients."
 									</p>
 									<h3><strong>Isaiah Ewing</strong></h3>
 									<h4>Software Engineer, TDS Telecommunications LLC</h4>

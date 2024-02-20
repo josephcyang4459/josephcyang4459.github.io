@@ -144,6 +144,35 @@ hr {
 	&:hover { background-image: url("../images/link-icons/email-icon-hover.png"); }
 }
 
+/* .Loader */
+.loader {
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	min-height: 100vh;
+	padding: 0;
+	margin: 0;
+	z-index: 99999;  
+	background: var(--deep-oceanblue);
+	transition: 1s;
+
+	p {
+		text-align: center;
+		color: var(--stone);
+		font-weight: bold;
+		font-size: 5rem;
+		padding: 0;
+		margin: 0;
+		margin-bottom: -100px;
+		transition: 1s;
+		opacity: 0;
+	  }
+  }
+
 /* Overlay */
 #overlay {
 	width: 80px;
