@@ -18,16 +18,30 @@
 		prevScrollpos = currentScrollPos;
 	}
 
-	// Play initial animations on page load.
+	// Do processes on load
 	$window.on('load', function() {
-		window.setTimeout(function() {
-			$body.removeClass('is-preload');
-		}, 100);
+		for (const element of document.forms) {element.reset();}
+		loadingScreen();
 	});
 })(jQuery);
 
-function clearForms() {
-	let i;
-	for (i = 0; (i < document.forms.length); i++)
-		document.forms[i].reset();
+// Do the loading screen
+async function loadingScreen() {
+	let loader = document.getElementById("loader");
+	let loaderContent = document.getElementById("loader-content");
+	loaderContent.style="opacity: 1; margin-bottom: 0";
+
+	for (let i = 0; i < 3; i ++) {
+		await new Promise(r => setTimeout(r, 1000));
+		loaderContent.textContent += ".";
+	}
+
+	setTimeout(()=> {
+		loader.style="opacity: 0;";
+		loaderContent.style="margin-bottom: 100px; color: #d2e8ff;";
+	}, 1000);
+
+	setTimeout(()=> { loader.style="opacity: 0; display: none;"; }, 2000);
+
+	
 }
