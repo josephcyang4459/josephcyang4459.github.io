@@ -158,7 +158,7 @@ hr {
 	margin: 0;
 	z-index: 99999;  
 	background: var(--deep-oceanblue);
-	transition: 1s;
+	transition: .75s;
 
 	p {
 		text-align: center;
@@ -168,7 +168,7 @@ hr {
 		padding: 0;
 		margin: 0;
 		margin-bottom: -100px;
-		transition: 1s;
+		transition: .75s;
 		opacity: 0;
 	  }
   }

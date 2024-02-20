@@ -29,19 +29,20 @@
 async function loadingScreen() {
 	let loader = document.getElementById("loader");
 	let loaderContent = document.getElementById("loader-content");
+	let loadTimer = 750;
 	loaderContent.style="opacity: 1; margin-bottom: 0";
 
 	for (let i = 0; i < 3; i ++) {
-		await new Promise(r => setTimeout(r, 1000));
+		await new Promise(r => setTimeout(r, loadTimer));
 		loaderContent.textContent += ".";
 	}
 
 	setTimeout(()=> {
 		loader.style="opacity: 0;";
 		loaderContent.style="margin-bottom: 100px; color: #d2e8ff;";
-	}, 1000);
+	}, loadTimer);
 
-	setTimeout(()=> { loader.style="opacity: 0; display: none;"; }, 2000);
+	setTimeout(()=> { loader.style="opacity: 0; display: none;"; }, loadTimer * 2);
 
 	
 }
