@@ -1,1 +1,2 @@
 2026-10-13-Joseph-Yang-Added Changelog because for some reason there wasn't one.
+2026-10-13-Joseph-Yang-Added more experience, removed freelance experience, and updated resume and intro text.
